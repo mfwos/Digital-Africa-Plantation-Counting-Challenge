@@ -56,14 +56,14 @@ The following two figures illustrate the full backbone structure and the complet
 
 
 <figure>
-    <img src="Figures/EffnetB3_illustration.png" width = "500" height="400">
+    <img src="Figures/EffnetB3_illustration.png" width = "500" height="750">
      <p style='text-align: center'>
       <figurecaption>Figure 1: Full structure of the EfficientNet B3 network. IRC refers to inverted residual connection as introduced in [2]. The distinction between part 1 and part 2 of the network (part 2 beginning with the downscaling from 14x14 to 7x7) is important for the structure of the boosting model (see below). The figure has been taken from [3] and slightly altered to show the features output by the backbone and to highlight the distinction between what we call here part 1 and part 2 of the network.</figurecaption>
     </p>
 </figure>
 
 <figure>
-    <img src="Figures/Base_Model.png" width = "650" height="500">
+    <img src="Figures/Base_Model.png" width = "750" height="300">
      <p style='text-align: center'>
       <figurecaption>Figure 2: After using the backbone to produce the feature map for each image, global average pooling and a simple linear layer are used to create the final output of our base model.</figurecaption>
     </p>
@@ -216,7 +216,7 @@ The idea of using different scales of the image to produce better predictions is
 The architecture of the boosting model is illustrated below. Note that once more we do not add any new non-linearities but stayed with the most simple set up of only putting tensors together linearly. Again this is mainly due to the lack of performance gain we observed when adding non-linearities. 
 
 <figure>
-    <img src="Figures/Boosting_Model.png" width = "900" height="750">
+    <img src="Figures/Boosting_Model.png" width = "1000" height="550">
      <p style='text-align: center'>
       <figurecaption>Figure 3: In the boosting model architecture features are temporarily saved after part 1 of the backbone and added to the final feature map after an upscaling and linear channel reduction. This way we get a lower resoluation feature map (14x14) that still contains information from the highest resolution (7x7 after running through the whole backbone) - see also [4] where a similar architecture was used. For the exact distinction between part 1 and part 2 of the backbone network see Figure 1. </figurecaption>
     </p>
