@@ -63,7 +63,7 @@ The following two figures illustrate the full backbone structure and the complet
 </figure>
 
 <figure>
-    <img src="Figures/Base_Model.png" width = "750" height="300">
+    <img src="Figures/Base_Model.png" width = "650" height="300">
      <p style='text-align: center'>
       <figurecaption>Figure 2: After using the backbone to produce the feature map for each image, global average pooling and a simple linear layer are used to create the final output of our base model.</figurecaption>
     </p>
