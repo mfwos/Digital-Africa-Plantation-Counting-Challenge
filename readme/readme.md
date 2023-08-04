@@ -216,7 +216,7 @@ The idea of using different scales of the image to produce better predictions is
 The architecture of the boosting model is illustrated below. Note that once more we do not add any new non-linearities but stayed with the most simple set up of only putting tensors together linearly. Again this is mainly due to the lack of performance gain we observed when adding non-linearities. 
 
 <figure>
-    <img src="Figures/Boosting_Model.png" width = "1000" height="550">
+    <img src="Figures/Boosting_Model.png" width = "1000" height="450">
      <p style='text-align: center'>
       <figurecaption>Figure 3: In the boosting model architecture features are temporarily saved after part 1 of the backbone and added to the final feature map after an upscaling and linear channel reduction. This way we get a lower resoluation feature map (14x14) that still contains information from the highest resolution (7x7 after running through the whole backbone) - see also [4] where a similar architecture was used. For the exact distinction between part 1 and part 2 of the backbone network see Figure 1. </figurecaption>
     </p>
